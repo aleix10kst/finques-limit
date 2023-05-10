@@ -15,6 +15,24 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@finques-limit/api/auth": ["libs/api/auth/src/index.ts"],
+      "@finques-limit/api/employees": ["libs/api/employees/src/index.ts"],
+      "@finques-limit/api/shared/configuration": [
+        "libs/api/shared/configuration/src/index.ts"
+      ],
+      "@finques-limit/api/shared/database": [
+        "libs/api/shared/database/src/index.ts"
+      ],
+      "@finques-limit/api/users": ["libs/api/users/src/index.ts"],
+      "@finques-limit/web/administrator/feature/detail": [
+        "libs/web/administrator/feature/detail/src/index.ts"
+      ],
+      "@finques-limit/web/administrator/feature/list": [
+        "libs/web/administrator/feature/list/src/index.ts"
+      ],
+      "@finques-limit/web/administrator/feature/shell": [
+        "libs/web/administrator/feature/shell/src/index.ts"
+      ],
       "@finques-limit/web/auth/data-access": [
         "libs/web/auth/data-access/src/index.ts"
       ],
@@ -22,6 +40,33 @@
         "libs/web/auth/feature/sign-in/src/index.ts"
       ],
       "@finques-limit/web/auth/utils": ["libs/web/auth/utils/src/index.ts"],
+      "@finques-limit/web/client/feature/detail": [
+        "libs/web/client/feature/detail/src/index.ts"
+      ],
+      "@finques-limit/web/client/feature/list": [
+        "libs/web/client/feature/list/src/index.ts"
+      ],
+      "@finques-limit/web/client/feature/shell": [
+        "libs/web/client/feature/shell/src/index.ts"
+      ],
+      "@finques-limit/web/company/feature/detail": [
+        "libs/web/company/feature/detail/src/index.ts"
+      ],
+      "@finques-limit/web/company/feature/list": [
+        "libs/web/company/feature/list/src/index.ts"
+      ],
+      "@finques-limit/web/company/feature/shell": [
+        "libs/web/company/feature/shell/src/index.ts"
+      ],
+      "@finques-limit/web/employee/feature/detail": [
+        "libs/web/employee/feature/detail/src/index.ts"
+      ],
+      "@finques-limit/web/employee/feature/list": [
+        "libs/web/employee/feature/list/src/index.ts"
+      ],
+      "@finques-limit/web/employee/feature/shell": [
+        "libs/web/employee/feature/shell/src/index.ts"
+      ],
       "@finques-limit/web/home/feature": ["libs/web/home/feature/src/index.ts"],
       "@finques-limit/web/shell/feature": [
         "libs/web/shell/feature/src/index.ts"

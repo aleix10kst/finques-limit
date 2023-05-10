@@ -17,8 +17,8 @@ export class SignInComponent {
   private readonly authService = inject(AuthService);
 
   readonly form = this.fb.group({
-    email: this.fb.control('', { nonNullable: true }),
-    password: this.fb.control('', { nonNullable: true }),
+    email: this.fb.control('acanet94@gmail.com', { nonNullable: true }),
+    password: this.fb.control('aleix1234', { nonNullable: true }),
   });
 
   errorMessage: string | null = null;

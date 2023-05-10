@@ -11,10 +11,10 @@ export const authGuard: CanMatchFn = (route: Route, segments: UrlSegment[]) => {
   return authService.authUser$.pipe(
     switchMap((user) => {
       console.log(user);
-      if (!user) {
+      /*      if (!user) {
         router.navigate(['/sign-in'], { replaceUrl: true });
         return of(false);
-      }
+      } */
       return of(true);
     })
   );

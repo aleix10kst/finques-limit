@@ -1,0 +1,78 @@
+<nav class="bg-white shadow-sm">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
+    <div class="flex h-16 justify-between">
+      <div class="flex">
+        <div class="flex flex-shrink-0 items-center pt-1">
+          <a class="text-md text-xl font-bold" routerLink="/">FinquesLimit</a>
+        </div>
+        <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+          <a
+            class="inline-flex items-center border-b-2 px-1 pt-1 text-sm font-medium"
+            routerLink="/"
+            routerLinkActive="border-b-blue-900"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Home</a
+          >
+          <a
+            class="inline-flex items-center border-b-2 px-1 pt-1 text-sm font-medium"
+            routerLink="/treballadors"
+            routerLinkActive="border-b-blue-900"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Treballadors</a
+          >
+          <a
+            class="inline-flex items-center border-b-2 px-1 pt-1 text-sm font-medium"
+            routerLink="/empreses"
+            routerLinkActive="border-b-blue-900"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Empreses</a
+          >
+          <a
+            class="inline-flex items-center border-b-2 px-1 pt-1 text-sm font-medium"
+            routerLink="/clients"
+            routerLinkActive="border-b-blue-900"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Clients</a
+          >
+          <a
+            class="inline-flex items-center border-b-2 px-1 pt-1 text-sm font-medium"
+            routerLink="/administradors"
+            routerLinkActive="border-b-blue-900"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Administradors</a
+          >
+        </div>
+      </div>
+      <div class="hidden sm:ml-6 sm:flex sm:items-center">
+        <button type="button" class="rounded-full bg-white p-1 text-gray-400">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            aria-hidden="true"
+            class="h-6 w-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"
+            ></path>
+          </svg>
+        </button>
+        <div class="relative ml-3">
+          <div>
+            <button class="flex rounded-full bg-white text-sm">
+              <img
+                class="h-8 w-8 rounded-full"
+                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80"
+                alt=""
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
