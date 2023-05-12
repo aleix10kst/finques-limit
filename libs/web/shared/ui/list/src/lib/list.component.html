@@ -1,0 +1,58 @@
+<div class="generic-list">
+  <div class="mb-3 flex flex-col space-y-4">
+    <h2 class="text-2xl">{{ title }}</h2>
+    <div class="flex items-center justify-between">
+      <div><ng-content select=".actions"></ng-content></div>
+      <button class="rounded-lg border p-2" (click)="handleAddItem()">
+        Afegeix
+      </button>
+    </div>
+    <hr />
+    <form *ngIf="showSearch">
+      <div class="w-full">
+        <div class="relative">
+          <div
+            class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              aria-hidden="true"
+              class="h-5 w-5 text-gray-400"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </div>
+          <input
+            class="block w-full rounded-md border-0 bg-white px-3 py-3 pl-10 leading-6 text-gray-900 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-indigo-600 sm:text-sm"
+            [formControl]="searchControl"
+            type="search"
+            placeholder="Search"
+          />
+        </div>
+      </div>
+    </form>
+    <finques-limit-table [displayedColumns]="columns"></finques-limit-table>
+
+    <!-- 
+   
+  </div>
+  <form class="generic-list__search" *ngIf="showSearch">
+    <mat-form-field class="generic-list__search-form">
+      <mat-label>Introdueix un nom per filtrar...</mat-label>
+      <input matInput [formControl]="searchCtrl" autocomplete="off" />
+    </mat-form-field>
+  </form> -->
+    <table></table>
+    <!--   <mat-paginator
+    showFirstLastButtons
+    [length]="dataSource.totalCount"
+    [pageSize]="pageSize"
+  ></mat-paginator> -->
+  </div>
+</div>

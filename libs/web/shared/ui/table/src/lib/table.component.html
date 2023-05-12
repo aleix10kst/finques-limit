@@ -1,0 +1,45 @@
+<table cdk-table [dataSource]="[]">
+  <ng-container cdkColumnDef=""></ng-container>
+  <!--- Note that these columns can be defined in any order.
+    The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- <ng-container
+      *ngFor="
+        let field of tableFields.slice(0, tableFields.length - 1);
+        let idx = index
+      "
+      [matColumnDef]="field"
+    >
+      <th mat-header-cell *matHeaderCellDef>{{ tableColumns[idx] }}</th>
+      <td mat-cell *matCellDef="let element">
+        {{ element[tableFields[idx]] }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let element; let index = index">
+        <div class="generic-list__action-column-cell">
+          <button
+            mat-raised-button
+            color="primary"
+            (click)="onClickViewDetails(element)"
+          >
+            Veure detall
+          </button>
+          <button
+            mat-raised-button
+            color="warn"
+            (click)="onClickDelete(element)"
+          >
+            Esborra
+          </button>
+        </div>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="tableFields"></tr>
+    <tr mat-row *matRowDef="let row; columns: tableFields"></tr> -->
+  <tr cdk-header-row *cdkHeaderRowDef="displayedColumns"></tr>
+  <tr cdk-row *cdkRowDef="let row; columns: displayedColumns"></tr>
+</table>
