@@ -23,6 +23,5 @@ import { databaseConfig } from '@finques-limit/api/shared/configuration';
       }),
     }),
   ],
-  exports: [TypeOrmModule],
 })
 export class DatabaseModule {}
