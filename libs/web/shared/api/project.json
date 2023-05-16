@@ -1,7 +1,7 @@
 {
-  "name": "web-shared-api-api",
+  "name": "web-shared-api",
   "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/web/shared/api/api/src",
+  "sourceRoot": "libs/web/shared/api/src",
   "prefix": "finques-limit",
   "tags": [],
   "projectType": "library",
