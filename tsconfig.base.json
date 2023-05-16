@@ -68,6 +68,7 @@
         "libs/web/employee/feature/shell/src/index.ts"
       ],
       "@finques-limit/web/home/feature": ["libs/web/home/feature/src/index.ts"],
+      "@finques-limit/web/shared/api": ["libs/web/shared/api/src/index.ts"],
       "@finques-limit/web/shared/ui/list": [
         "libs/web/shared/ui/list/src/index.ts"
       ],

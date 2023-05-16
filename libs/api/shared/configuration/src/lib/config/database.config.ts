@@ -1,8 +1,5 @@
 import { registerAs } from '@nestjs/config';
 
 export const databaseConfig = registerAs('database', () => ({
-  DATABASE_URL:
-    process.env['NODE_ENV'] === 'development'
-      ? 'postgres://postgres:postgres@localhost:5432/postgres'
-      : process.env['DATABASE_URL'],
+  DATABASE_URL: process.env['DATABASE_URL'],
 }));
