@@ -22,7 +22,7 @@ function initSwagger(app: INestApplication) {
     operationIdFactory: (controllerKey: string, methodKey: string) => methodKey,
   };
   const document = SwaggerModule.createDocument(app, config, options);
-  SwaggerModule.setup('api-docs', app, document);
+  SwaggerModule.setup('api', app, document);
 }
 
 async function bootstrap() {

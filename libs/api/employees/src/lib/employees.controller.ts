@@ -12,7 +12,7 @@ import { CreateEmployeeDto } from './dto/create-employee.dto';
 import { UpdateEmployeeDto } from './dto/update-employee.dto';
 import { ApiTags } from '@nestjs/swagger';
 
-@ApiTags('Employees')
+@ApiTags('employees')
 @Controller('employees')
 export class EmployeesController {
   constructor(private readonly employeesService: EmployeesService) {}
@@ -29,7 +29,7 @@ export class EmployeesController {
 
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.employeesService.findOne(+id);
+    return this.employeesService.findOne(id);
   }
 
   @Patch(':id')
@@ -37,11 +37,11 @@ export class EmployeesController {
     @Param('id') id: string,
     @Body() updateEmployeeDto: UpdateEmployeeDto
   ) {
-    return this.employeesService.update(+id, updateEmployeeDto);
+    return this.employeesService.update(id, updateEmployeeDto);
   }
 
   @Delete(':id')
   remove(@Param('id') id: string) {
-    return this.employeesService.remove(+id);
+    return this.employeesService.remove(id);
   }
 }

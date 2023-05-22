@@ -5,7 +5,10 @@ import { SignUpDto } from './dto/sign-up.dto';
 import { Auth } from './decorators/auth.decorator';
 import { AuthType } from './auth.types';
 import { RefreshTokenDto } from './dto/refresh-token.dto';
+import { ApiTags } from '@nestjs/swagger';
+import { AccessTokenDto } from './dto/access-token.dto';
 
+@ApiTags('auth')
 @Auth(AuthType.None)
 @Controller('auth')
 export class AuthController {
@@ -18,7 +21,7 @@ export class AuthController {
 
   @HttpCode(HttpStatus.OK)
   @Post('sign-in')
-  signIn(@Body() signInDto: SignInDto) {
+  signIn(@Body() signInDto: SignInDto): Promise<AccessTokenDto> {
     return this.authService.signIn(signInDto);
   }
 

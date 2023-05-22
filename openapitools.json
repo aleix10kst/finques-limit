@@ -9,6 +9,8 @@
         "inputSpec": "http://localhost:3000/api-docs-json",
         "output": "./libs/web/shared/api/src/lib",
         "enablePostProcessFile": true,
+        "skipOverwrite": false,
+        "skipValidateSpec": true,
         "additionalProperties": {
           "enumPropertyNaming": "original",
           "supportsES6": true,

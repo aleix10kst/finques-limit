@@ -11,9 +11,7 @@ export const databaseConfig = registerAs<TypeOrmModuleOptions>(
     // TODO: Delete once the app is released
     synchronize: true,
     extra: {
-      ssl: {
-        rejectUnauthorized: false,
-      },
+      ssl: false,
     },
   })
 );

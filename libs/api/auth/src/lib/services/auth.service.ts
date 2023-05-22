@@ -31,6 +31,7 @@ export class AuthService {
       const user = new User();
       user.email = signUpDto.email;
       user.password = await this.hashingService.hash(signUpDto.password);
+      user.name = signUpDto.name;
 
       await this.usersRepository.save(user);
     } catch (err: any) {
@@ -64,7 +65,7 @@ export class AuthService {
       this.signToken<Partial<ActiveUserData>>(
         user.id,
         this.jwtConfiguration.accessTokenTtl,
-        { email: user.email }
+        { email: user.email, name: user.name }
       ),
       this.signToken(user.id, this.jwtConfiguration.refreshTokenTtl),
     ]);

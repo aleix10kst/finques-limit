@@ -8,8 +8,11 @@ import { jwtConfig } from '@finques-limit/api/shared/configuration';
 import { UsersModule } from '@finques-limit/api/users';
 import { ConfigModule } from '@nestjs/config';
 import { AccessTokenGuard } from './guards/access-token.guard';
+import { AuthController } from './auth.controller';
+import { AuthenticationGuard } from './guards/auth.guard';
 
 @Module({
+  controllers: [AuthController],
   imports: [
     UsersModule,
     ConfigModule.forFeature(jwtConfig),
@@ -23,8 +26,9 @@ import { AccessTokenGuard } from './guards/access-token.guard';
     },
     {
       provide: APP_GUARD,
-      useClass: AccessTokenGuard,
+      useClass: AuthenticationGuard,
     },
+    AccessTokenGuard,
   ],
 })
 export class AuthenticationModule {}
