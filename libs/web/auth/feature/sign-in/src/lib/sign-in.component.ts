@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
-import { AuthService } from '@finques-limit/web/auth/data-access';
+import { AuthenticationService } from '@finques-limit/web/auth/data-access';
 import { Router } from '@angular/router';
 
 @Component({
@@ -14,11 +14,11 @@ import { Router } from '@angular/router';
 export class SignInComponent {
   private readonly fb = inject(FormBuilder);
   private readonly router = inject(Router);
-  private readonly authService = inject(AuthService);
+  private readonly authService = inject(AuthenticationService);
 
   readonly form = this.fb.group({
-    email: this.fb.control('acanet94@gmail.com', { nonNullable: true }),
-    password: this.fb.control('aleix1234', { nonNullable: true }),
+    email: this.fb.control('', { nonNullable: true }),
+    password: this.fb.control('', { nonNullable: true }),
   });
 
   errorMessage: string | null = null;
