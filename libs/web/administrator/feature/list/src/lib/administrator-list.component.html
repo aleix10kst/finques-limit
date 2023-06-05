@@ -1,0 +1,5 @@
+<finques-limit-list
+  title="Administradors"
+  [columns]="displayedColumns"
+  [items]="(administrators$ | async) ?? []"
+/>

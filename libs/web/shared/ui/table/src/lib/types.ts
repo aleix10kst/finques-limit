@@ -1,4 +1,5 @@
 export type TableColumnData<T> = {
-  key: keyof T;
-  label: string;
+  columnDef: string;
+  header: string;
+  cell: (item: T) => T[keyof T];
 };

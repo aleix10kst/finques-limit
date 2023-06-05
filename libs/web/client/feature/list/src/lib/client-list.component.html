@@ -1,0 +1,5 @@
+<finques-limit-list
+  title="Clients"
+  [columns]="displayedColumns"
+  [items]="(clients$ | async) ?? []"
+/>

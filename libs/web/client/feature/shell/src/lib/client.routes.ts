@@ -1,6 +1,6 @@
 import { Route } from '@angular/router';
 import { ShellComponent } from './shell.component';
-import { ListComponent } from '@finques-limit/web/client/feature/list';
+import { ClientListComponent } from '@finques-limit/web/client/feature/list';
 import { DetailComponent } from '@finques-limit/web/client/feature/detail';
 
 export const clientRoutes: Route = {
@@ -8,6 +8,6 @@ export const clientRoutes: Route = {
   component: ShellComponent,
   children: [
     { path: ':id', loadComponent: () => DetailComponent },
-    { path: '', component: ListComponent },
+    { path: '', component: ClientListComponent },
   ],
 };

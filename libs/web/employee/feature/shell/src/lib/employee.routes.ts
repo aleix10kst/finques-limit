@@ -7,6 +7,11 @@ export const employeeRoutes: Route = {
   path: 'treballadors',
   component: ShellComponent,
   children: [
+    {
+      path: 'crea',
+      loadChildren: () => DetailComponent,
+      data: { type: 'create' },
+    },
     { path: ':id', loadComponent: () => DetailComponent },
     { path: '', component: EmployeeListComponent },
   ],

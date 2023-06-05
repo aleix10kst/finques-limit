@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'finques-limit-detail',
+  selector: 'finques-limit-employee-detail',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './detail.component.html',
