@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 
 @Module({
-  imports: [ConfigModule.forRoot({ load: [] })],
+  imports: [ConfigModule.forRoot()],
   exports: [ConfigModule],
 })
 export class ConfigurationModule {}

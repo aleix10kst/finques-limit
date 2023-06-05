@@ -13,22 +13,22 @@ export class EmployeesService {
   ) {}
 
   create(createEmployeeDto: CreateEmployeeDto) {
-    return 'This action adds a new employee';
+    return this.employeeRepository.create();
   }
 
   findAll() {
-    return `This action returns all employees`;
+    return this.employeeRepository.find();
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} employee`;
+  findOne(id: string) {
+    return this.employeeRepository.findOne({ where: { id: id } });
   }
 
-  update(id: number, updateEmployeeDto: UpdateEmployeeDto) {
-    return `This action updates a #${id} employee`;
+  update(id: string, updateEmployeeDto: UpdateEmployeeDto) {
+    return this.employeeRepository.update({ id }, updateEmployeeDto);
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} employee`;
+  remove(id: string) {
+    return this.employeeRepository.delete(id);
   }
 }
