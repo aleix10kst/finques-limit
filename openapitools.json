@@ -6,15 +6,14 @@
     "generators": {
       "v1": {
         "generatorName": "typescript-angular",
-        "inputSpec": "http://localhost:3000/api-docs-json",
+        "inputSpec": "http://localhost:3000/api-json",
         "output": "./libs/web/shared/api/src/lib",
         "enablePostProcessFile": true,
-        "skipOverwrite": false,
         "skipValidateSpec": true,
         "additionalProperties": {
           "enumPropertyNaming": "original",
           "supportsES6": true,
-          "nullSafeAdditionalProps": true
+          "nullSafeAdditionalProps": false
         }
       }
     }
