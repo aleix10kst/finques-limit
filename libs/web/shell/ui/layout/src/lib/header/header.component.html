@@ -63,13 +63,38 @@
         </button>
         <div class="relative ml-3">
           <div>
-            <button class="flex rounded-full bg-white text-sm">
+            <button
+              class="relative flex rounded-full bg-white text-sm"
+              [cdkMenuTriggerFor]="menu"
+            >
               <img
                 class="h-8 w-8 rounded-full"
                 src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80"
                 alt=""
               />
             </button>
+
+            <ng-template #menu>
+              <div
+                class="border-gray-60 absolute mt-3 flex w-40 flex-col gap-y-4 rounded-md border bg-white py-2"
+                cdkMenu
+              >
+                <button
+                  class="p-2 hover:bg-gray-50"
+                  cdkMenuItem
+                  (cdkMenuItemTriggered)="handleMyAccount()"
+                >
+                  El meu compte
+                </button>
+                <button
+                  class="p-2 hover:bg-gray-50"
+                  cdkMenuItem
+                  (cdkMenuItemTriggered)="handleSignOut()"
+                >
+                  Tanca la sessió
+                </button>
+              </div>
+            </ng-template>
           </div>
         </div>
       </div>
